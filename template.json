@@ -44,13 +44,17 @@
         "name": "F1",
         "capacity": 1
       },
-      "kind": "linux"
+      "kind": "linux",
+      "properties": {
+        "reserved": true
+      }
     },
     {
       "type": "Microsoft.Web/sites",
       "apiVersion": "2021-02-01",
       "name": "[parameters('webAppName')]",
       "location": "[parameters('location')]",
+      "kind": "app,linux",
       "tags": {
         "displayName": "[parameters('webAppName')]"
       },
